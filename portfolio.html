@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Portfolio | WCFC</title>
+  <meta name="description" content="See crochet and knitted outfits, bags and accessories made by Wonderful Craft and Fashion Creations in Ibadan.">
+  <meta name="theme-color" content="#111111">
+  <meta property="og:title" content="Portfolio | WCFC">
+  <meta property="og:description" content="See crochet and knitted outfits, bags and accessories made by Wonderful Craft and Fashion Creations in Ibadan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-paper font-sans text-ink antialiased" data-page="portfolio">
+  <div id="site-header"></div>
+  <main id="main">
+    <div id="portfolio">
+      <section class="bg-soft">
+        <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 md:py-20 lg:px-8">
+          <h1 class="font-display text-4xl font-semibold sm:text-5xl lg:text-6xl">Portfolio</h1>
+          <p class="mt-4 max-w-2xl text-lg text-ink/75">A look at our pieces. Tap any photo to see it larger and read more.</p>
+        </div>
+      </section>
+      <section aria-label="Project gallery" class="mx-auto max-w-7xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
+        <div id="filters" role="group" aria-label="Filter by category" class="flex flex-wrap gap-2"></div>
+        <p id="gallery-count" class="mt-4 text-ink/70" aria-live="polite"></p>
+        <div id="gallery" class="mt-8">
+          <ul class="grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+            <li class="reveal"><button type="button" data-gallery-index="0" aria-label="View Adult Crochet Shirt" class="group block w-full text-left"><span class="relative block aspect-[4/5] overflow-hidden rounded-brand bg-soft"><img src="99.jpg" alt="Adult crochet shirt by WCFC" loading="lazy" data-label="Adult Crochet Shirt" data-ph="0" onerror="imgFallback(this)" class="size-full object-cover"></span><span class="mt-3 block font-display text-xl font-semibold">Adult Crochet Shirt</span><span class="block text-sm text-ink/70">Crochet</span></button></li>
+            <li class="reveal"><button type="button" data-gallery-index="1" aria-label="View Long Knitted Gown Set" class="group block w-full text-left"><span class="relative block aspect-[4/5] overflow-hidden rounded-brand bg-soft"><img src="images/portfolio/knitted-gown-set.jpg" alt="Long knitted gown set by WCFC" loading="lazy" data-label="Long Knitted Gown Set" data-ph="1" onerror="imgFallback(this)" class="size-full object-cover"></span><span class="mt-3 block font-display text-xl font-semibold">Long Knitted Gown Set</span><span class="block text-sm text-ink/70">Knitted</span></button></li>
+            <li class="reveal"><button type="button" data-gallery-index="2" aria-label="View Machine-Knitted Cardigan" class="group block w-full text-left"><span class="relative block aspect-[4/5] overflow-hidden rounded-brand bg-soft"><img src="images/portfolio/cardigan.jpg" alt="Machine-knitted cardigan by WCFC" loading="lazy" data-label="Machine-Knitted Cardigan" data-ph="2" onerror="imgFallback(this)" class="size-full object-cover"></span><span class="mt-3 block font-display text-xl font-semibold">Machine-Knitted Cardigan</span><span class="block text-sm text-ink/70">Knitted</span></button></li>
+            <li class="reveal"><button type="button" data-gallery-index="3" aria-label="View Baby Shoes" class="group block w-full text-left"><span class="relative block aspect-[4/5] overflow-hidden rounded-brand bg-soft"><img src="images/portfolio/baby-shoes.jpg" alt="Handmade baby shoes by WCFC" loading="lazy" data-label="Baby Shoes" data-ph="3" onerror="imgFallback(this)" class="size-full object-cover"></span><span class="mt-3 block font-display text-xl font-semibold">Baby Shoes</span><span class="block text-sm text-ink/70">Children</span></button></li>
+            <li class="reveal"><button type="button" data-gallery-index="4" aria-label="View Crochet Bag" class="group block w-full text-left"><span class="relative block aspect-[4/5] overflow-hidden rounded-brand bg-soft"><img src="images/portfolio/crochet-bag.jpg" alt="Crochet bag by WCFC" loading="lazy" data-label="Crochet Bag" data-ph="4" onerror="imgFallback(this)" class="size-full object-cover"></span><span class="mt-3 block font-display text-xl font-semibold">Crochet Bag</span><span class="block text-sm text-ink/70">Bags &amp; accessories</span></button></li>
+            <li class="reveal"><button type="button" data-gallery-index="5" aria-label="View Children's Outfit" class="group block w-full text-left"><span class="relative block aspect-[4/5] overflow-hidden rounded-brand bg-soft"><img src="images/portfolio/childrens-outfit.jpg" alt="Children's crochet outfit by WCFC" loading="lazy" data-label="Children's Outfit" data-ph="5" onerror="imgFallback(this)" class="size-full object-cover"></span><span class="mt-3 block font-display text-xl font-semibold">Children's Outfit</span><span class="block text-sm text-ink/70">Children</span></button></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="site.js" defer></script>
+</body>
+</html>
