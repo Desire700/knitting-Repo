@@ -32,7 +32,9 @@ body {
 }
 
 #header {
+  position: sticky;
   top: env(safe-area-inset-top, 0px);
+  z-index: 50;
 }
 
 body::before {
@@ -155,6 +157,68 @@ body::before {
   transform: translateY(-1px);
 }
 
+#hero-ctas > a {
+  transition: transform .22s ease, box-shadow .22s ease, color .22s ease, background-color .22s ease;
+}
+
+#hero-ctas > a:first-child:hover {
+  transform: translateY(-4px);
+  background-color: var(--color-accent);
+  color: var(--color-ink);
+  box-shadow: 0 12px 24px rgb(0 0 0 / 28%);
+}
+
+.wcfc-hero #hero-ctas > a:nth-child(2) {
+  color: var(--color-paper);
+  box-shadow: inset 0 0 0 2px rgb(255 255 255 / 90%);
+}
+
+.wcfc-hero #hero-ctas > a:nth-child(2):hover {
+  transform: translateY(-4px);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  box-shadow: inset 0 0 0 2px var(--color-paper), 0 12px 24px rgb(0 0 0 / 28%);
+}
+
+.wcfc-social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgb(17 17 17 / 18%);
+}
+
+.wcfc-social-link[data-social="TikTok"] {
+  border-color: #111111;
+  background-color: #111111;
+  color: #ffffff;
+}
+
+.wcfc-social-link[data-social="TikTok"]:hover {
+  transform: translateY(-3px) rotate(-4deg);
+  box-shadow: 3px 0 #25f4ee, -3px 0 #fe2c55, 0 8px 18px rgb(17 17 17 / 22%);
+}
+
+.wcfc-social-link[data-social="Instagram"] {
+  border-color: transparent;
+  background: linear-gradient(45deg, #feda75 0%, #fa7e1e 28%, #d62976 58%, #962fbf 78%, #4f5bd5 100%);
+  color: #ffffff;
+}
+
+.wcfc-social-link[data-social="Instagram"]:hover {
+  transform: translateY(-3px) rotate(4deg);
+  box-shadow: 0 8px 20px rgb(214 41 118 / 38%);
+  filter: saturate(1.2) brightness(1.08);
+}
+
+.wcfc-social-link[data-social="Facebook"] {
+  border-color: #0866ff;
+  background-color: #0866ff;
+  color: #ffffff;
+}
+
+.wcfc-social-link[data-social="Facebook"]:hover {
+  background-color: #0757d5;
+  box-shadow: 0 8px 18px rgb(8 102 255 / 32%);
+}
+
 a:focus-visible,
 button:focus-visible {
   scroll-margin: 1rem;
@@ -206,6 +270,8 @@ a[href^="https://wa.me/"][aria-label="Chat with us on WhatsApp"]:hover {
   #values li,
   #process-steps > li,
   #hero-slideshow-toggle,
+  #hero-ctas > a,
+  .wcfc-social-link,
   #menu-btn,
   #site-header nav > a,
   a[href^="https://wa.me/"][aria-label="Chat with us on WhatsApp"] {

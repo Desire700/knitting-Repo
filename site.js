@@ -18,7 +18,7 @@ const BUSINESS = {
     city: "Ibadan",
     region: "Oyo",
     country: "Nigeria",
-    address: "No 4 Onikoko, Apete Rd",
+    address: "No 2A Ilupeju Community Arola Apete Ibadan",
     note: "Delivery available nationwide"
   },
   website: "", // Set the live HTTPS domain, including its trailing slash, before launch.
@@ -34,7 +34,7 @@ const BUSINESS = {
 document.documentElement.classList.add("js");
 
 const BRAND = {
-  logo: "",
+  logo: "wcfc%20logo.jpeg",
   colors: { primary: "#111111", accent: "#c9a227", ink: "#111111", paper: "#ffffff", soft: "#f7f7f7" },
   fonts: { heading: "Fraunces", body: "DM Sans" },
   cornerRadius: "1rem"
@@ -77,9 +77,9 @@ const CONTACT = {
   email: "wonderfulcraftfashioncreations@gmail.com",
   hours: "",
   socials: [
-    { name: "Instagram", url: "" },
-    { name: "Facebook", url: "" },
-    { name: "TikTok", url: "" }
+    { name: "TikTok", url: "https://www.tiktok.com/@wonderfulcraftfashion?_r=1&_t=ZS-9ApMD71RW3r" },
+    { name: "Instagram", url: "https://www.instagram.com/wonderful_wonderfashion?mdxt=eW1paHZ3OGxyeWUw" },
+    { name: "Facebook", url: "https://www.facebook.com/akinwunmi.adedayo.94" }
   ],
   defaultMessage: "Hello WCFC! I'd like to make an enquiry."
 };
@@ -338,7 +338,7 @@ const NAV = [
 
 function renderLayout(page) {
   const logo = BRAND.logo
-    ? `<img src="${esc(BRAND.logo)}" alt="${esc(BUSINESS.brandName)}" class="h-10 w-auto" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span hidden class="block max-w-[270px] font-display text-lg font-bold leading-tight tracking-tight text-accent sm:max-w-none sm:text-xl lg:text-2xl">${esc(BUSINESS.shortName)}</span>`
+    ? `<img src="${esc(BRAND.logo)}" alt="" class="h-10 w-auto sm:h-12" onerror="this.hidden=true"><span class="max-w-none whitespace-nowrap font-display text-[clamp(8px,2.4vw,18px)] font-bold leading-tight tracking-tight text-[#806000]">${esc(BUSINESS.shortName)}</span>`
     : `<span class="block max-w-[270px] font-display text-lg font-bold leading-tight tracking-tight text-accent sm:max-w-none sm:text-xl lg:text-2xl">${esc(BUSINESS.shortName || BUSINESS.brandName)}</span>`;
   const navLink = item => `<li><a href="${item.href}"${item.id === page ? ' aria-current="page"' : ""} class="${item.cta
     ? "rounded-full bg-primary px-5 py-2 text-paper hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
@@ -350,7 +350,7 @@ function renderLayout(page) {
   $("#site-header").innerHTML = `
     <header id="header" class="sticky top-0 z-50 border-b border-ink/10 bg-paper/95 backdrop-blur transition-shadow">
       <nav aria-label="Main" class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="index.html" class="flex items-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">${logo}</a>
+        <a href="index.html" class="flex items-center gap-2 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">${logo}</a>
         <ul class="hidden items-center gap-8 text-sm font-medium md:flex">${NAV.map(navLink).join("")}</ul>
         <button id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" class="rounded-lg p-2 hover:bg-soft focus-visible:outline-2 focus-visible:outline-primary md:hidden">
           <span class="sr-only">Open menu</span>
@@ -478,7 +478,7 @@ function renderHome() {
   if ($("#hero-title")) {
     $("#hero-eyebrow").textContent = BUSINESS.brandName;
     $("#hero-intro").textContent = BUSINESS.intro;
-    $("#hero-ctas").innerHTML = `<a href="portfolio.html" class="${BTN.primary}">See our work</a>${WA.cta("Hello! I'd like to place an order.", "Order on WhatsApp", BTN.outline)}`;
+    $("#hero-ctas").innerHTML = `<a href="portfolio.html" class="${BTN.primary} wcfc-hero-cta">See our work</a>${WA.cta("Hello! I'd like to place an order.", "Order on WhatsApp", `${BTN.outline} wcfc-hero-cta`)}`;
     $("#cta-actions").innerHTML = WA.cta(CONTACT.defaultMessage, "Start a conversation", BTN.light);
     initHeroSlideshow();
     Gallery.render($("#featured-gallery"), featured.length ? featured : PORTFOLIO.items.slice(0, 6));
@@ -596,7 +596,16 @@ function renderContact() {
   cards.push(`<div class="rounded-brand border border-ink/10 bg-paper p-6"><p class="text-sm text-ink/70">Location</p><p class="mt-1 text-lg font-semibold">${esc(placeLine(location))}</p>${location.address ? `<p class="text-ink/75">${esc(location.address)}</p>` : ""}${location.note ? `<p class="text-ink/75">${esc(location.note)}</p>` : ""}</div>`);
   if (CONTACT.hours) cards.push(`<div class="rounded-brand border border-ink/10 bg-paper p-6"><p class="text-sm text-ink/70">Opening hours</p><p class="mt-1 text-lg font-semibold">${esc(CONTACT.hours)}</p></div>`);
   const socials = CONTACT.socials.filter(social => social.url);
-  if (socials.length) cards.push(`<div class="rounded-brand border border-ink/10 bg-paper p-6"><p class="text-sm text-ink/70">Follow us</p><ul class="mt-2 flex flex-wrap gap-x-5 gap-y-1">${socials.map(social => `<li><a href="${esc(social.url)}" target="_blank" rel="noopener noreferrer" class="font-semibold underline decoration-accent decoration-2 underline-offset-4 hover:text-primary">${esc(social.name)}</a></li>`).join("")}</ul></div>`);
+  const socialIcons = {
+    TikTok: '<path d="M14 3h3c.2 2.2 1.5 3.8 4 4v3.2a9 9 0 0 1-4-1.2v6.2a6.2 6.2 0 1 1-6.2-6.2c.4 0 .8 0 1.2.1v3.3a3 3 0 1 0 1.9 2.8V3Z"/>',
+    Instagram: '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/>',
+    Facebook: '<path d="M14 21v-8h2.7l.4-3H14V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.8v3h2.8v8H14Z"/>'
+  };
+  if (socials.length) cards.push(`<div class="rounded-brand border border-ink/10 bg-paper p-6"><p class="text-sm text-ink/70">Follow us</p><ul class="mt-3 flex flex-wrap gap-3">${socials.map(social => `<li><a href="${esc(social.url)}" data-social="${esc(social.name)}" target="_blank" rel="noopener noreferrer" aria-label="Visit our ${esc(social.name)} profile (opens in a new tab)" title="${esc(social.name)}" class="wcfc-social-link grid size-12 place-items-center rounded-full border border-ink/10 bg-soft text-ink transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"><svg class="size-6" viewBox="0 0 24 24" fill="${social.name === "Facebook" || social.name === "TikTok" ? "currentColor" : "none"}" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${socialIcons[social.name]}</svg><span class="sr-only">${esc(social.name)}</span></a></li>`).join("")}</ul></div>`);
+  const mapQuery = encodeURIComponent(`${location.address}, ${placeLine(location)}`);
+  const mapUrl = `https://www.google.com/maps?q=${mapQuery}&output=embed`;
+  const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${mapQuery}`;
+  cards.push(`<div class="overflow-hidden rounded-brand border border-ink/10 bg-paper"><div class="flex items-center justify-between gap-3 p-5"><h2 class="font-semibold">Find us</h2><a href="${directionsUrl}" target="_blank" rel="noopener noreferrer" class="font-semibold text-primary underline decoration-accent decoration-2 underline-offset-4">Get directions<span class="sr-only"> (opens in a new tab)</span></a></div><iframe title="Map to WCFC at ${esc(location.address)}, ${esc(placeLine(location))}" src="${mapUrl}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="h-64 w-full border-0"></iframe></div>`);
 
   if (!$("#enquiry-form")) {
   $("#main").innerHTML = `
