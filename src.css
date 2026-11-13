@@ -133,6 +133,7 @@ body::before {
 
 #service-highlights article,
 #service-grid article,
+#testimonials article,
 #values li,
 #process-steps > li {
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
@@ -140,11 +141,27 @@ body::before {
 
 #service-highlights article:hover,
 #service-grid article:hover,
+#testimonials article:hover,
 #values li:hover,
 #process-steps > li:hover {
   transform: translateY(-4px);
   border-color: color-mix(in srgb, var(--color-accent) 55%, transparent);
   box-shadow: 0 14px 28px rgb(17 17 17 / 9%);
+}
+
+.wcfc-testimonial-card {
+  box-shadow: 0 18px 40px rgb(0 0 0 / 14%);
+}
+
+.wcfc-quote-mark {
+  position: absolute;
+  top: .25rem;
+  right: 1.5rem;
+  color: rgb(201 162 39 / 16%);
+  font-family: Georgia, serif;
+  font-size: 8rem;
+  line-height: 1;
+  pointer-events: none;
 }
 
 #hero-slideshow-toggle,
@@ -267,6 +284,7 @@ a[href^="https://wa.me/"][aria-label="Chat with us on WhatsApp"]:hover {
 
   #service-highlights article,
   #service-grid article,
+  #testimonials article,
   #values li,
   #process-steps > li,
   #hero-slideshow-toggle,
