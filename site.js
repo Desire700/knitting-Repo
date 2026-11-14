@@ -1,6 +1,6 @@
 const BUSINESS = {
   brandName: "Wonderful Craft and Fashion Creations (WCFC)",
-  shortName: "Wonderful Craft and Fashion Creations (WCFC)",
+  shortName: "Wonderful Craft and Fashion Creations",
   tagline: "Bringing out the beauty in you",
   intro: "Custom crochet and knitting for children and adults. We specialize in summer and winter outfits, bags, and accessories.",
   biography: [
@@ -43,12 +43,23 @@ const BRAND = {
 const PORTFOLIO = {
   categories: ["Crochet", "Knitted", "Children", "Bags & accessories"],
   items: [
-    { title: "Adult Crochet Shirt", category: "Crochet", image: "99.jpg", alt: "Adult crochet shirt by WCFC", description: "A custom crochet shirt for adults.", featured: true },
-    { title: "Long Knitted Gown Set", category: "Knitted", image: "images/portfolio/knitted-gown-set.jpg", alt: "Long knitted gown set by WCFC", description: "A long knitted gown set, made to order.", featured: true },
-    { title: "Machine-Knitted Cardigan", category: "Knitted", image: "images/portfolio/cardigan.jpg", alt: "Machine-knitted cardigan by WCFC", description: "A machine-knitted cardigan.", featured: true },
-    { title: "Baby Shoes", category: "Children", image: "images/portfolio/baby-shoes.jpg", alt: "Handmade baby shoes by WCFC", description: "Small, handmade baby shoes.", featured: true },
-    { title: "Crochet Bag", category: "Bags & accessories", image: "images/portfolio/crochet-bag.jpg", alt: "Crochet bag by WCFC", description: "A custom crochet bag.", featured: true },
-    { title: "Children's Outfit", category: "Children", image: "images/portfolio/childrens-outfit.jpg", alt: "Children's crochet outfit by WCFC", description: "A summer or winter outfit for children.", featured: true }
+    { title: "Adult Crochet Shirt", category: "Crochet", image: "crotchet shirt.jpg", alt: "Teal crochet shirt for adults", description: "A custom crochet shirt for adults.", price: 18000, featured: true },
+    { title: "Long Knitted Gown Set", category: "Knitted", image: "gown.webp", alt: "Pink long knitted gown", description: "A long knitted gown, made to order.", price: 25000, featured: true },
+    { title: "Machine-Knitted Cardigan", category: "Knitted", image: "cardigan.jpg", alt: "Grey button-front knitted cardigan", description: "A machine-knitted cardigan.", price: 22000, featured: true },
+    { title: "Handmade Baby Shoes", category: "Children", image: "shoes.jpg", alt: "Handmade pink and grey baby shoes", description: "Soft handmade baby shoes.", price: 7500, featured: true },
+    { title: "Knitted Handbag", category: "Bags & accessories", image: "knitting bag.jpg", alt: "Burgundy knitted handbag", description: "A compact handmade knitted handbag.", price: 14000, featured: true },
+    { title: "Crochet Baby Outfit Set", category: "Children", image: "children.jpg", alt: "Grey and cream crochet baby outfit set", description: "A coordinated crochet baby outfit with matching accessories.", price: 23000, featured: true },
+    { title: "Baby Knitwear Set", category: "Children", image: "images/hero/baby-knitwear-set.jpg", alt: "Cream baby knitwear set with a bonnet and booties", description: "A cozy baby knitwear set with a matching bonnet and booties.", price: 21000, featured: true },
+    { title: "Navy & Sky Blue Crochet Baby Outfit", category: "Children", image: "WhatsApp kitting img 1.jpeg", alt: "Navy and sky blue crochet baby outfit", description: "A handmade baby outfit in navy and sky blue yarn.", price: 16000, featured: true },
+    { title: "Pink & White Crochet Baby Layette Set", category: "Children", image: "WhatsApp knitting image 2.jpeg", alt: "Pink and white crochet baby layette set", description: "A pink and white baby layette with matching handmade accessories.", price: 24000, featured: true },
+    { title: "White & Red Crochet Baby Dress", category: "Children", image: "whatsapp knitting image 3.jpeg", alt: "White crochet baby dress with red trim", description: "A white handmade baby dress finished with bright red trim.", price: 14500, featured: true },
+    { title: "Aqua Crochet Baby Shawl & Accessories Set", category: "Children", image: "whatsapp knitting image 4.jpeg", alt: "Aqua baby shawl with matching crochet accessories", description: "A soft aqua shawl displayed with matching handmade baby accessories.", price: 18500, featured: true },
+    { title: "White & Pink Crochet Baby Sweater Set", category: "Children", image: "whatsapp knitting image 5.jpeg", alt: "White and pink crochet baby sweater set", description: "A white baby sweater set with pink accents and matching accessories.", price: 22000, featured: true },
+    { title: "Navy & Pink Knitted Baby Tracksuit", category: "Knitted", image: "WhatsApp knitting image 6.jpeg", alt: "Navy and pink striped knitted baby tracksuit", description: "A coordinated knitted baby outfit with a striped top, trousers and accessories.", price: 25000, featured: true },
+    { title: "Pink Crochet Baby Dress & Hat Set", category: "Children", image: "WhatsApp knitting image 7.jpeg", alt: "Pink crochet baby dress with a matching hat", description: "A pink handmade baby dress paired with a matching crochet hat.", price: 17000, featured: true },
+    { title: "Pink & White Crochet Baby Cardigan Set", category: "Children", image: "WhatsApp knitting image 8.jpeg", alt: "Pink and white crochet baby cardigan set", description: "A pink and white baby cardigan outfit with matching crochet accessories.", price: 21000, featured: true },
+    { title: "Pink & White Crochet Baby Set Detail", category: "Children", image: "WhatsApp knitting image 9.jpeg", alt: "Close-up of a pink and white crochet baby set", description: "A closer look at the details of a pink and white handmade baby set.", price: 23000, featured: true },
+    { title: "Pink Crochet Baby Summer Outfit", category: "Children", image: "whatsapp knitting image 10.jpeg", alt: "Baby wearing a pink crochet summer outfit and hat", description: "A pink crochet summer outfit and matching hat, shown on a baby.", price: 19000, featured: true }
   ]
 };
 
@@ -56,9 +67,9 @@ const SERVICES = {
   currency: "₦",
   intro: "Custom crochet and knitted pieces for children and adults, plus fresh catfish from WCFC Farms.",
   items: [
-    { name: "Adult Crochet Shirt", type: "Crochet", price: 45000, description: "A custom crochet shirt for adults." },
-    { name: "Long Knitted Gown Set", type: "Knitted", price: 55000, description: "A long knitted gown set, made to order." },
-    { name: "Machine-Knitted Cardigan", type: "Knitted", price: 25000, description: "A machine-knitted cardigan." },
+    { name: "Adult Crochet Shirt", type: "Crochet", price: 18000, description: "A custom crochet shirt for adults." },
+    { name: "Long Knitted Gown Set", type: "Knitted", price: 25000, description: "A long knitted gown set, made to order." },
+    { name: "Machine-Knitted Cardigan", type: "Knitted", price: 22000, description: "A machine-knitted cardigan." },
     { name: "Bags & Accessories", type: "Crochet", price: null, description: "Custom bags and accessories. Tell us what you would like." },
     { name: "Custom Crochet & Knitting", type: "Custom order", price: null, description: "Summer and winter outfits for children and adults, made around you." },
     { name: "Fresh Catfish (WCFC Farms)", type: "WCFC Farms", price: 4000, unit: "per kg", description: "Fresh catfish from WCFC Farms, sold by the kilogram." }
@@ -257,6 +268,7 @@ const Gallery = (() => {
               <span class="relative block aspect-[4/5] overflow-hidden rounded-brand bg-soft">${image({ src: item.image, alt: item.alt || item.title, index: i, label: item.title, cls: "size-full object-cover transition duration-500 group-hover:scale-105" })}</span>
               <span class="mt-3 block font-display text-xl font-semibold group-hover:text-primary">${esc(item.title)}</span>
               <span class="block text-sm text-ink/70">${esc(item.category)}</span>
+              ${item.price == null ? "" : `<span class="mt-1 block text-sm font-semibold">From ${money(item.price)}</span>`}
             </button>
           </li>`).join("")}</ul>`
       : '<p class="text-ink/70">No projects in this category yet.</p>';
@@ -281,6 +293,7 @@ const Gallery = (() => {
         <div class="flex flex-col p-6 pt-14 md:p-8 md:pt-14">
           <p id="lb-cat" class="text-xs font-semibold uppercase tracking-widest text-primary"></p>
           <h2 id="lb-title" class="mt-2 font-display text-3xl font-semibold leading-tight"></h2>
+          <p id="lb-price" class="mt-3 font-semibold"></p>
           <p id="lb-desc" class="mt-4 text-ink/80"></p>
           <div id="lb-cta" class="mt-6"></div>
           <p id="lb-count" class="mt-auto pt-6 text-sm text-ink/60"></p>
@@ -310,6 +323,7 @@ const Gallery = (() => {
     $("#lb-img", dialog).innerHTML = image({ src: item.image, alt: item.alt || item.title, index, label: item.title, eager: true, cls: "max-h-[55dvh] w-auto max-w-full rounded-brand object-contain md:max-h-[78dvh]" });
     $("#lb-cat", dialog).textContent = item.category;
     $("#lb-title", dialog).textContent = item.title;
+    $("#lb-price", dialog).textContent = item.price == null ? "" : `From ${money(item.price)}`;
     $("#lb-desc", dialog).textContent = item.description || "";
     $("#lb-cta", dialog).innerHTML = WA.cta(`Hello! I'd love something like your "${item.title}". Can we talk about it?`, "Ask about this piece");
     $("#lb-count", dialog).textContent = `${index + 1} of ${items.length}`;
@@ -338,7 +352,7 @@ const NAV = [
 
 function renderLayout(page) {
   const logo = BRAND.logo
-    ? `<img src="${esc(BRAND.logo)}" alt="" class="h-10 w-auto sm:h-12" onerror="this.hidden=true"><span class="max-w-none whitespace-nowrap font-display text-[clamp(8px,2.4vw,18px)] font-bold leading-tight tracking-tight text-[#806000]">${esc(BUSINESS.shortName)}</span>`
+    ? `<img src="${esc(BRAND.logo)}" alt="" class="size-10 rounded-full object-cover sm:size-12" onerror="this.hidden=true"><span class="whitespace-nowrap font-display text-[clamp(0.625rem,1.35vw,1.125rem)] font-bold leading-tight tracking-tight text-[#806000]">${esc(BUSINESS.shortName)}</span>`
     : `<span class="block max-w-[270px] font-display text-lg font-bold leading-tight tracking-tight text-accent sm:max-w-none sm:text-xl lg:text-2xl">${esc(BUSINESS.shortName || BUSINESS.brandName)}</span>`;
   const navLink = item => `<li><a href="${item.href}"${item.id === page ? ' aria-current="page"' : ""} class="${item.cta
     ? "rounded-full bg-primary px-5 py-2 text-paper hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
@@ -350,7 +364,7 @@ function renderLayout(page) {
   $("#site-header").innerHTML = `
     <header id="header" class="sticky top-0 z-50 border-b border-ink/10 bg-paper/95 backdrop-blur transition-shadow">
       <nav aria-label="Main" class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="index.html" class="flex items-center gap-2 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">${logo}</a>
+        <a href="index.html" aria-label="${esc(BUSINESS.shortName)}" class="flex items-center gap-2 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">${logo}</a>
         <ul class="hidden items-center gap-8 text-sm font-medium md:flex">${NAV.map(navLink).join("")}</ul>
         <button id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" class="rounded-lg p-2 hover:bg-soft focus-visible:outline-2 focus-visible:outline-primary md:hidden">
           <span class="sr-only">Open menu</span>
@@ -474,11 +488,10 @@ function titleBand(title, description) {
 }
 
 function renderHome() {
-  const featured = PORTFOLIO.items.filter(item => item.featured).slice(0, 6);
+  const featured = PORTFOLIO.items.filter(item => item.featured).slice(-6);
   if ($("#hero-title")) {
-    $("#hero-eyebrow").textContent = BUSINESS.brandName;
     $("#hero-intro").textContent = BUSINESS.intro;
-    $("#hero-ctas").innerHTML = `<a href="portfolio.html" class="${BTN.primary} wcfc-hero-cta">See our work</a>${WA.cta("Hello! I'd like to place an order.", "Order on WhatsApp", `${BTN.outline} wcfc-hero-cta`)}`;
+    $("#hero-ctas").innerHTML = `<a href="portfolio.html" class="wcfc-hero-cta wcfc-hero-cta-primary inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-semibold transition">See our work<svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>${WA.cta("Hello! I'd like to place an order.", "Order on WhatsApp", "wcfc-hero-cta wcfc-hero-cta-secondary inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-semibold transition")}`;
     $("#cta-actions").innerHTML = WA.cta(CONTACT.defaultMessage, "Start a conversation", BTN.light);
     initHeroSlideshow();
     Gallery.render($("#featured-gallery"), featured.length ? featured : PORTFOLIO.items.slice(0, 6));
@@ -494,8 +507,7 @@ function renderHome() {
       </div>
       <div class="relative z-10 mx-auto flex min-h-[520px] max-w-7xl items-center px-4 py-24 sm:px-6 sm:py-28 md:min-h-[580px] md:py-36 lg:px-8">
         <div class="wcfc-hero-copy max-w-3xl">
-          <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">${esc(BUSINESS.brandName)}</p>
-          <h1 id="hero-title" class="mt-3 font-display text-5xl font-semibold leading-[1.08] text-white sm:text-6xl">${esc(BUSINESS.tagline)}</h1>
+          <h1 id="hero-title" class="font-display text-5xl font-semibold leading-[1.08] text-white sm:text-6xl">${esc(BUSINESS.tagline)}</h1>
           <p class="mt-5 max-w-lg text-lg leading-relaxed text-white/90">${esc(BUSINESS.intro)}</p>
           <div class="mt-8 flex flex-wrap gap-3"><a href="portfolio.html" class="${BTN.primary}">See our work</a>${WA.cta("Hello! I'd like to place an order.", "Order on WhatsApp", "inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-semibold text-white ring-2 ring-white/80 transition hover:bg-white hover:text-ink")}</div>
         </div>

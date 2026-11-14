@@ -175,26 +175,40 @@ body::before {
 }
 
 #hero-ctas > a {
-  transition: transform .22s ease, box-shadow .22s ease, color .22s ease, background-color .22s ease;
+  min-height: 3.5rem;
+  border: 1px solid transparent;
+  box-shadow: 0 8px 22px rgb(0 0 0 / 20%);
+  transition: transform .22s ease, box-shadow .22s ease, color .22s ease, background-color .22s ease, border-color .22s ease;
 }
 
 #hero-ctas > a:first-child:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
+  background-color: #e0b638;
+  box-shadow: 0 14px 28px rgb(0 0 0 / 30%);
+}
+
+.wcfc-hero-cta-primary {
   background-color: var(--color-accent);
   color: var(--color-ink);
-  box-shadow: 0 12px 24px rgb(0 0 0 / 28%);
 }
 
-.wcfc-hero #hero-ctas > a:nth-child(2) {
+.wcfc-hero-cta-secondary {
   color: var(--color-paper);
-  box-shadow: inset 0 0 0 2px rgb(255 255 255 / 90%);
+  border-color: rgb(255 255 255 / 75%);
+  background-color: rgb(255 255 255 / 10%);
+  backdrop-filter: blur(8px);
 }
 
-.wcfc-hero #hero-ctas > a:nth-child(2):hover {
-  transform: translateY(-4px);
+.wcfc-hero-cta-secondary:hover {
+  transform: translateY(-3px);
   background-color: var(--color-paper);
   color: var(--color-ink);
-  box-shadow: inset 0 0 0 2px var(--color-paper), 0 12px 24px rgb(0 0 0 / 28%);
+  box-shadow: 0 14px 28px rgb(0 0 0 / 30%);
+}
+
+#hero-ctas > a:focus-visible {
+  outline: 3px solid var(--color-paper);
+  outline-offset: 4px;
 }
 
 .wcfc-social-link:hover {
